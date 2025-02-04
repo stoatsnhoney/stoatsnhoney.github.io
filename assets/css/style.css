@@ -1,0 +1,138 @@
+.current {
+    color: green;
+  }
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #000000;
+}
+
+/* Header Styles */
+header {
+  background: #4CAF50;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 20px;
+  color: #ff0000;
+}
+
+/* Navigation Styles */
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #45a049;
+}
+
+/* Main Content Styles */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.article {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  flex: 1 1 calc(33.333% - 20px); /* 3 columns */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.article:hover {
+  transform: translateY(-5px);
+}
+
+.article h2 {
+  margin-top: 0;
+}
+
+/* Footer Styles */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .article {
+      flex: 1 1 calc(50% - 20px); /* 2 columns on tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .article {
+      flex: 1 1 100%; /* 1 column on mobile */
+  }
+
+  nav {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  nav a {
+      margin: 5px 0;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}

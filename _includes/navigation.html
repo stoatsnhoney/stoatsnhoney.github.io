@@ -1,0 +1,16 @@
+<nav>
+  {% for item in site.data.navigation %}
+    {% if item.sublinks %}
+      <div class="dropdown">
+        <a href="{{ item.link }}" class="dropbtn{% if page.url == item.link %} current{% endif %}">{{ item.name }}</a>
+        <div class="dropdown-content">
+          {% for sublink in item.sublinks %}
+            <a href="{{ sublink.link }}"{% if page.url == sublink.link %} class="current"{% endif %}>{{ sublink.name }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    {% else %}
+      <a href="{{ item.link }}"{% if page.url == item.link %} class="current"{% endif %}>{{ item.name }}</a>
+    {% endif %}
+  {% endfor %}
+</nav>

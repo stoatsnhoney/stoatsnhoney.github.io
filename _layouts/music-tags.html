@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<!-- We're going to give each page a tag when we create it.
+This will be the title -->
+<h1>{{ page.tag | capitalize }}</h1>
+
+<ul>
+    {% for music in site.music %}
+    {% if music.music-tags contains page.tag %}
+            <li>
+                <a href="{{ music.url }}">{{ music.title }}</a>
+            </li>
+    {% endif %}
+    {% endfor %}
+</ul>

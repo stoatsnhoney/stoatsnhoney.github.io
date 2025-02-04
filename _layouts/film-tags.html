@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<!-- We're going to give each page a tag when we create it.
+This will be the title -->
+<h1>{{ page.tag | capitalize }}</h1>
+
+<ul>
+    {% for film in site.film %}
+    {% if film.film-tags contains page.tag %}
+            <li>
+                <a href="{{ film.url }}">{{ film.title }}</a>
+            </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+
