@@ -1,5 +1,16 @@
+:root {
+  --primary-color: #4a8eb9;
+  --secondary-color: #ffffff;
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --header-background: #ffffff;
+  --header-text-color: #4CAF50;
+  --nav-hover-background: #e8e8e8;
+  --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .current {
-    color: rgb(0, 255, 0);
+    color: rgb(0, 149, 0);
   }
 
 /* Reset some default styles */
@@ -10,32 +21,39 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #000000;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+p {
+  margin: 20px 0;
+  color: var(--text-color);
 }
 
 /* Header Styles */
 header {
-  background: #4CAF50;
-  color: #fff;
+  background: var(--header-background);
+  color: var(--header-text-color);
   padding: 20px;
   text-align: center;
+  box-shadow: var(--box-shadow);
 }
 
 h1 {
-  margin: 20px;
-  color: #006aff;
+  margin: 20px 0;
+  color: var(--header-text-color);
 }
 
 /* Navigation Styles */
 nav {
   margin-top: 15px;
+  text-align: center;
 }
 
 nav a {
-  color: #fff;
+  color: var(--text-color);
   text-decoration: none;
   padding: 10px 15px;
   margin: 0 5px;
@@ -44,7 +62,7 @@ nav a {
 }
 
 nav a:hover {
-  background: #45a049;
+  background: var(--nav-hover-background);
 }
 
 /* Main Content Styles */
@@ -52,16 +70,17 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
+  justify-content: center;
 }
 
 .article {
-  background: #fff;
+  background: var(--secondary-color);
   border: 1px solid #ddd;
   border-radius: 5px;
   margin: 10px;
   padding: 15px;
   flex: 1 1 calc(33.333% - 20px); /* 3 columns */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   transition: transform 0.3s;
 }
 
@@ -135,4 +154,18 @@ footer {
 
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  flex: 1 1 100%;
+  margin: 20px 0;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
 }

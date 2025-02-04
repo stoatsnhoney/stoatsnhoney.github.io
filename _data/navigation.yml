@@ -9,3 +9,7 @@
       link: /filmBlog.html
     - name: Music Reviews
       link: /musicBlog.html
+- name: Portfolio
+  link: /portfolio.html
+- name: Contact
+  link: /contact.html
