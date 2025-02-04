@@ -1,0 +1,11 @@
+- name: Home
+  link: /
+- name: About
+  link: /about.html
+- name: Blog
+  link: /blog.html
+  sublinks:
+    - name: Film Reviews
+      link: /filmBlog.html
+    - name: Music Reviews
+      link: /musicBlog.html

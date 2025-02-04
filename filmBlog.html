@@ -1,0 +1,14 @@
+---
+layout: default
+title: Blog
+---
+<h1>Latest Posts</h1>
+
+<ul>
+  {% for film in site.film %}
+    <li>
+      <h2><a href="{{ film.url }}">{{ film.title }}</a></h2>
+      {{ film.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
