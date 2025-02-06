@@ -1,16 +1,10 @@
 ---
-layout: default
-title: Blog
+layout: blog
+title: Latest Posts
+collections:
+  - film
+  - music
+tag_fields:
+  - film-tags
+  - music-tags
 ---
-<h1>All Posts</h1>
-
-<ul>
-  {% for collection in site.collections %}
-    {% for post in collection.docs %}
-      <li>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        {{ post.excerpt }}
-      </li>
-    {% endfor %}
-  {% endfor %}
-</ul>

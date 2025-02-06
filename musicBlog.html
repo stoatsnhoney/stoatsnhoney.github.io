@@ -1,14 +1,8 @@
 ---
-layout: default
-title: Blog
+layout: blog
+title: Latest Music Reviews
+collections:
+  - music
+tag_fields:
+  - music-tags
 ---
-<h1>Latest Posts</h1>
-
-<ul>
-  {% for music in site.music %}
-    <li>
-      <h2><a href="{{ music.url }}">{{ music.title }}</a></h2>
-      {{ music.excerpt }}
-    </li>
-  {% endfor %}
-</ul>

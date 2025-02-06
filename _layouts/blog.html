@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+
+<div style="display: flex;">
+  <div style="flex: 3;">
+    <ul>
+      {% for collection in page.collections %}
+        {% for item in site[collection] %}
+          <li>
+            <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+            {{ item.excerpt }}
+          </li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div style="flex: 1; padding-left: 20px;">
+    <h2>Tags</h2>
+    <ul>
+      {% assign all_tags = "" | split: "" %}
+      {% for collection in page.collections %}
+        {% assign tags = site[collection] | map: page.tag_fields[forloop.index0] | uniq %}
+        {% assign all_tags = all_tags | concat: tags %}
+      {% endfor %}
+      {% assign all_tags = all_tags | uniq %}
+      {% for tag in all_tags %}
+        <li><a href="/tags/{{ tag | slugify }}">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

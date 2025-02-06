@@ -11,6 +11,8 @@ collections:
     permalink: /music-tags/:name/
   type:
     output: true
+  post:
+    output: true
 
 defaults:
   - scope:
