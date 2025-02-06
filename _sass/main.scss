@@ -1,11 +1,11 @@
 :root {
-  --primary-color: #00ff04;
+  --primary-color: #00c703;
   --secondary-color: #ff0000;
   --background-color: #000000;
   --text-color: #ffffff;
   --link-color: #009dff;
   --header-background: #ffffff;
-  --header-text-color: #4CAF50;
+  --header-text-color: var(--primary-color);
   --nav-hover-background: #7f7f7f;
   --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -29,7 +29,7 @@ body {
 }
 
 p {
-  margin: 20px 0;
+  margin: 20px;
   color: var(--text-color);
 }
 
@@ -43,8 +43,13 @@ header {
 }
 
 h1 {
-  margin: 20px 0;
   color: var(--header-text-color);
+  margin: 20px;
+}
+
+h2 {
+  color: var(--header-text-color);
+  margin: 20px;
 }
 
 /* Navigation Styles */
@@ -190,4 +195,34 @@ a:hover {
 /* selected link */
 a:active {
   color: var(--link-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.no-bullets {
+  list-style-type: none;
 }

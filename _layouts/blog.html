@@ -8,7 +8,7 @@ layout: default
     <ul>
       {% for collection in page.collections %}
         {% for item in site[collection] %}
-          <li>
+          <li class="no-bullets">
             <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
             {{ item.excerpt }}
           </li>
