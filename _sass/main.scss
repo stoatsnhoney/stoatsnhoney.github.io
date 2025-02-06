@@ -1,11 +1,12 @@
 :root {
-  --primary-color: #4a8eb9;
-  --secondary-color: #ffffff;
+  --primary-color: #00ff04;
+  --secondary-color: #ff0000;
   --background-color: #000000;
   --text-color: #ffffff;
+  --link-color: #009dff;
   --header-background: #ffffff;
   --header-text-color: #4CAF50;
-  --nav-hover-background: #e8e8e8;
+  --nav-hover-background: #7f7f7f;
   --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -135,17 +136,18 @@ footer {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  background: #5a5a5a;
 }
 
 .dropdown-content a {
-  color: black;
+  color: rgb(255, 255, 255);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: var(--nav-hover-background);
 }
 
 .dropdown:hover .dropdown-content {
@@ -153,7 +155,7 @@ footer {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  background-color: var(--nav-hover-background);
 }
 
 /* Sidebar Styles */
@@ -168,4 +170,24 @@ footer {
 
 .tab-content.active {
   display: block;
+}
+
+/* unvisited link */
+a:link {
+  color: var(--link-color);
+}
+
+/* visited link */
+a:visited {
+  color: var(--link-color);
+}
+
+/* mouse over link */
+a:hover {
+  color: var(--link-color);
+}
+
+/* selected link */
+a:active {
+  color: var(--link-color);
 }
