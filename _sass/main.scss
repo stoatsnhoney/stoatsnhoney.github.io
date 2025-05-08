@@ -26,7 +26,7 @@ header {
 
 h1 {
   margin: 20px;
-  color: #006aff;
+  color: #ffffff;
 }
 
 /* Navigation Styles */
@@ -137,23 +137,14 @@ footer {
   background-color: #3e8e41;
 }
 
-section {
-  width: 100%;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-#section1 {
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-#section2 {
-  background-color: #4CAF50;
-  color: #fff;
-}
-
-#section3 {
-  background-color: #333;
-  color: #fff;
+.image-header {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
