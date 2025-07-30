@@ -1,5 +1,6 @@
 .current {
-    color: rgb(0, 255, 0);
+    color: #13a78c;
+    font-weight: bold;
   }
 
 /* Reset some default styles */
@@ -18,7 +19,7 @@ body {
 
 /* Header Styles */
 header {
-  background: #4CAF50;
+  background: #13a78c;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -32,6 +33,7 @@ h1 {
 /* Navigation Styles */
 nav {
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 nav a {
@@ -44,7 +46,7 @@ nav a {
 }
 
 nav a:hover {
-  background: #45a049;
+  background: #13a78c;
 }
 
 /* Main Content Styles */
