@@ -39,9 +39,11 @@ h1 {
 nav {
   margin-top: 15px;
   margin-bottom: 15px;
+  text-align: center; /* Center the navbar */
 }
 
 nav a {
+  display: inline-block; /* Ensure links are inline */
   color: #ffffff;
   text-decoration: none;
   padding: 10px 15px;
@@ -124,7 +126,7 @@ footer {
   height: auto; /* Adjust height if needed */
   box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
   z-index: 1;
-  top: calc(100% + 5px);
+  top: 100%;
   left: 0; /* Align it with the left edge of the parent */
   border-radius: 10px; /* Adjust corner roundness */
   padding: 5px; /* Add padding inside the dropdown */

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_music/Apples.md",
+                "file": "_film/Alien.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Apples"
+              "title": "Alien"
             }
           }
         ]
@@ -170,6 +170,26 @@
   },
   "active": "a6a475a36020b496",
   "lastOpenFiles": [
+    "about.md",
+    "contact.md",
+    "_film/Alien.md",
+    "tags/music tags/soundtrack.md",
+    "tags/music tags/classical.md",
+    "tags/music tags",
+    "_site/tags/horror/index.html",
+    "_site/tags/horror",
+    "_site/tags/film tags/horror/index.html",
+    "_site/tags/film tags/horror",
+    "_site/tags/film tags",
+    "_site/tags/film tags.html",
+    "_site/tags/index.html",
+    "_site/film/Alien.html",
+    "tags/film tags/horror.md",
+    "tags/film tags/action.md",
+    "tags/film tags/drama.md",
+    "tags/film tags",
+    "tags/horror.md",
+    "tags/drama copy.md",
     "_music/Kiwifruit.md",
     "_music/Apples.md"
   ]
