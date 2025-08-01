@@ -2,8 +2,10 @@
 layout: post
 author: Jay Friesen
 type: post
-image: "/assets/images/Universe.png"
+image: "/assets/images/posters/Alien (1979).jpeg"
+title: Alien
 release: 1979
+date: 2025-05-05
 film-tags:
   - horror
 ---
