@@ -3,7 +3,8 @@ layout: post
 author: Jay Friesen
 type: post
 image: "/assets/images/Universe.png"
-release: 1979
+title: "Mission: Impossible The Final Reckoning"
+release: 2025
 film-tags:
   - horror
 ---

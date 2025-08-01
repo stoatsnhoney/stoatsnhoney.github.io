@@ -24,8 +24,9 @@ p {
 
 /* Header Styles */
 header {
-  background: #13a78c;
-  color: #fff;
+  background: #13A78C;
+  background: linear-gradient(90deg, rgba(19, 167, 140, 1) 0%, rgba(11, 59, 74, 1) 100%);
+  color: #ffffff;
   padding: 20px;
   text-align: center;
 }
@@ -158,14 +159,72 @@ footer {
   color: #ffffff; /* Keep the text white */
 }
 
-.image-header {
-  position: relative;
+.hero {
+  position: static;
   background-size: cover;
   background-position: center;
-  height: 300px; /* Adjust height as needed */
+  height: 300px;
+  align-content: center;
+}
+
+img[alt=Universe] {
+  width: 200px;
+}
+
+.image-gallery {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.gallery-item {
+  position: relative; /* Enable absolute positioning for child elements */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.gallery-item:hover img {
+  filter: blur(4px) brightness(0.5); /* Blur and darken the image */
+}
+
+.gallery-item .overlay-title,
+.gallery-item .overlay-year {
+  position: absolute; /* Position text relative to the .gallery-item */
+  color: #ffffff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-item:hover .overlay-title,
+.gallery-item:hover .overlay-year {
+  opacity: 1; /* Show text on hover */
+}
+
+.gallery-item .overlay-title {
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.gallery-item .overlay-year {
+  top: 90%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+  font-size: 1rem;
 }

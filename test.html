@@ -1,0 +1,55 @@
+<h1>All Posts</h1>
+
+<div class="image-gallery">
+      <div class="gallery-item">
+        <img src="assets/images/Universe.png">
+        <h2 class="overlay-text">Alien</h2>
+        <p class="overlay-text">1979</p>
+      </div>
+</div>
+
+
+
+<style>
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .gallery-item {
+    position: relative; /* Ensure text can be positioned on top */
+    overflow: hidden; /* Prevent content overflow */
+    width: 300px;
+    text-align: center;
+    z-index: 0;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    z-index: 0;
+  }
+
+  .gallery-item:hover img {
+    filter: blur(4px) brightness(0.5); /* Blur and darken the image */
+  }
+
+  .gallery-item .overlay-text {
+    position: absolute;
+    top: -50%;
+    color: #ff0000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+  }
+
+  .gallery-item:hover .overlay-text {
+    opacity: 1; /* Show text on hover */
+  }
+</style>
