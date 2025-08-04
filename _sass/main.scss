@@ -9,40 +9,46 @@ $font: "Libertinus Sans", "Verdana", sans-serif;
 
 body {
   font-family: $font;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1;
   color: $textcolor;
   background-color: $bgcolor;
+  margin: 0;
 }
 
 p {
-  font-size: 1rem; /* Adjust size as needed */
-  line-height: 1.8; /* Improves readability */
-  color: $textcolor; /* Neutral text color */
-  margin: 20px;
+  font-size: 1.2em;
+  line-height: 1.2;
+  color: $textcolor;
 }
 
 h1 {
-  margin: 20px;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
 }
 
 // MARK: Special Elements
 
-header {
-  background: #13A78C;
-  background: linear-gradient(90deg, rgba(19, 167, 140, 1) 0%, rgba(11, 59, 74, 1) 100%);
-  color: $textcolor;
-  padding: 20px;
-  text-align: center;
-}
-
 .hero {
   position: static;
+  background: linear-gradient(90deg, $accent 0%, #0b3b4a 100%);
   background-size: cover;
   background-position: center;
   height: 300px;
+  padding: 20px;
   align-content: center;
   text-align: center;
   color: #ffffff;
+}
+
+.subtitle {
+  color: #ffffff;
+  font-size: 2em;
+  line-height: 0;
 }
 
 // MARK: Navigation
@@ -57,13 +63,17 @@ header {
   }
 
 nav {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  text-align: center; /* Center the navbar */
+  position: sticky;
+  top: 0;
+  padding: 15px 0;
+  text-align: center;
+  background: #ffffffcc;
+  backdrop-filter: blur(7px);
 }
 
 nav a {
-  display: inline-block; /* Ensure links are inline */
+  display: inline-block;
+  font-size: 1.2em;
   color: $textcolor;
   text-decoration: none;
   padding: 10px 15px;
@@ -86,14 +96,13 @@ nav a:hover {
   display: none;
   position: absolute;
   background-color: #13a78c;
-  min-width: 200px; /* Adjust width */
-  height: auto; /* Adjust height if needed */
+  min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
   z-index: 1;
   top: 100%;
-  left: 0; /* Align it with the left edge of the parent */
-  border-radius: 10px; /* Adjust corner roundness */
-  padding: 5px; /* Add padding inside the dropdown */
+  left: 0;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .dropdown-content a {
@@ -125,13 +134,13 @@ nav a:hover {
 
 @media (max-width: 768px) {
   .article {
-      flex: 1 1 calc(50% - 20px); /* 2 columns on tablet */
+      flex: 1 1 calc(50% - 20px);
   }
 }
 
 @media (max-width: 480px) {
   .article {
-      flex: 1 1 100%; /* 1 column on mobile */
+      flex: 1 1 100%;
   }
 
   nav {
@@ -153,53 +162,53 @@ nav a:hover {
 }
 
 .gallery-item {
-  position: relative; /* Enable absolute positioning for child elements */
+  position: relative;
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  justify-content: center;
+  align-items: center;
   width: 300px;
-  margin: 0;
-  padding: 0;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .gallery-item img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 16px;
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  transition: all 0.3s ease;
 }
 
 .gallery-item:hover img {
-  filter: blur(4px) brightness(0.5); /* Blur and darken the image */
+  filter: blur(4px) brightness(0.5);
 }
 
 .gallery-item .overlay-title,
 .gallery-item .overlay-year {
-  position: absolute; /* Position text relative to the .gallery-item */
+  position: absolute;
   color: #ffffff;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+  transition: opacity 0.3s ease;
   margin: 0;
   padding: 0;
 }
 
 .gallery-item:hover .overlay-title,
 .gallery-item:hover .overlay-year {
-  opacity: 1; /* Show text on hover */
+  opacity: 1;
 }
 
 .gallery-item .overlay-title {
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 .gallery-item .overlay-year {
-  top: 90%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 1rem;
 }
