@@ -1,5 +1,54 @@
+// MARK: Variables
+
+$bgcolor: #ffffff;
+$textcolor: #000000;
+$accent: #13a78c;
+$font: "Libertinus Sans", "Verdana", sans-serif;
+
+// MARK: Body
+
+body {
+  font-family: $font;
+  line-height: 1.6;
+  color: $textcolor;
+  background-color: $bgcolor;
+}
+
+p {
+  font-size: 1rem; /* Adjust size as needed */
+  line-height: 1.8; /* Improves readability */
+  color: $textcolor; /* Neutral text color */
+  margin: 20px;
+}
+
+h1 {
+  margin: 20px;
+}
+
+// MARK: Special Elements
+
+header {
+  background: #13A78C;
+  background: linear-gradient(90deg, rgba(19, 167, 140, 1) 0%, rgba(11, 59, 74, 1) 100%);
+  color: $textcolor;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero {
+  position: static;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  align-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+// MARK: Navigation
+
 .current {
-    color: #13a78c;
+    color: $accent;
     font-weight: bold;
   }
 
@@ -7,36 +56,6 @@
     color: #ffffff;
   }
 
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #000000;
-}
-
-/* Default Paragraph Styles */
-p {
-  font-size: 1rem; /* Adjust size as needed */
-  line-height: 1.8; /* Improves readability */
-  color: #ffffff; /* Neutral text color */
-  margin: 20px;
-}
-
-/* Header Styles */
-header {
-  background: #13A78C;
-  background: linear-gradient(90deg, rgba(19, 167, 140, 1) 0%, rgba(11, 59, 74, 1) 100%);
-  color: #ffffff;
-  padding: 20px;
-  text-align: center;
-}
-
-h1 {
-  margin: 20px;
-  color: #ffffff;
-}
-
-/* Navigation Styles */
 nav {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -45,7 +64,7 @@ nav {
 
 nav a {
   display: inline-block; /* Ensure links are inline */
-  color: #ffffff;
+  color: $textcolor;
   text-decoration: none;
   padding: 10px 15px;
   margin: 0 5px;
@@ -54,64 +73,8 @@ nav a {
 
 nav a:hover {
   background: #13a78c;
+  color: #ffffff;
   transition: 0.3s;
-}
-
-/* Main Content Styles */
-.main {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-.article {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin: 10px;
-  padding: 15px;
-  flex: 1 1 calc(33.333% - 20px); /* 3 columns */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.article:hover {
-  transform: translateY(-5px);
-}
-
-.article h2 {
-  margin-top: 0;
-}
-
-/* Footer Styles */
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  position: relative;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .article {
-      flex: 1 1 calc(50% - 20px); /* 2 columns on tablet */
-  }
-}
-
-@media (max-width: 480px) {
-  .article {
-      flex: 1 1 100%; /* 1 column on mobile */
-  }
-
-  nav {
-      display: flex;
-      flex-direction: column;
-  }
-  
-  nav a {
-      margin: 5px 0;
-  }
 }
 
 .dropdown {
@@ -154,22 +117,34 @@ footer {
   background-color: #13a78c;
 }
 
-/* Ensure the top-level nav link stays white when hovering over the dropdown */
 .dropdown:hover > .current {
-  color: #ffffff; /* Keep the text white */
+  color: #ffffff;
 }
 
-.hero {
-  position: static;
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  align-content: center;
+// MARK: Media
+
+@media (max-width: 768px) {
+  .article {
+      flex: 1 1 calc(50% - 20px); /* 2 columns on tablet */
+  }
 }
 
-img[alt=Universe] {
-  width: 200px;
+@media (max-width: 480px) {
+  .article {
+      flex: 1 1 100%; /* 1 column on mobile */
+  }
+
+  nav {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  nav a {
+      margin: 5px 0;
+  }
 }
+
+// MARK: Image Gallery
 
 .image-gallery {
   display: flex;
