@@ -79,8 +79,9 @@ nav {
   top: 0;
   padding: 15px 0;
   text-align: center;
-  background: #ffffff5b;
+  background: #ffffffbb;
   backdrop-filter: blur(8px);
+  z-index: 10;
 }
 
 nav a {
