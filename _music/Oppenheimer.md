@@ -5,7 +5,7 @@ type: post
 image: "/assets/images/albums/Oppenheimer (2023).jpeg"
 title: Oppenheimer
 release: 2020
-date: 2025-03-03
+date: 2025-05-05
 music-tags: ["soundtrack", "classical"]
 ---
 An apple is a sweet, edible fruit produced by an apple tree.

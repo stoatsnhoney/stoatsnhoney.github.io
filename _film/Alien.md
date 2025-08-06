@@ -2,10 +2,10 @@
 layout: post
 author: Jay Friesen
 type: post
-image: "/assets/images/posters/Alien (1979).jpeg"
+image: /assets/images/posters/Alien (1979).jpeg
 title: Alien
 release: 1979
-date: 2025-05-05
+date: 2025-05-06
 film-tags:
   - horror
 ---
@@ -36,8 +36,20 @@ And one brief mention of Bolaji Badejo, who wore the Xenomorph suit. While the c
 
 Finally, the true protagonist of the story: Jones the cat. Oh wait, sorry no it's Ripley. I just like Jonesy.
 
-Sigourney Weaver's breakout role as Ripley has become one of if not her most iconic roles, and one of the most iconic horror and action stars. Ripley helped start the horror trope of the ["last girl standing"](https://tvtropes.org/pmwiki/pmwiki.php/Main/FinalGirl) and she earned it. Ripley doesn't have much depth in this installment—she follows protocol when it comes to the safety of the crew, and is willing to do what it takes to survive. But Weaver's strong performance is what makes Ripley so memorable. Weaver shows Ripley's true drive for survival, especially when left alone in the intense third act.
+Sigourney Weaver's breakout role as Ripley has become one of if not her most iconic roles, and one of the most iconic horror and action stars. Ripley helped form the horror trope of the ["last girl standing"](https://tvtropes.org/pmwiki/pmwiki.php/Main/FinalGirl) and she earned it. Ripley doesn't have much depth in this installment—she follows protocol when it comes to the safety of the crew, and is willing to do what it takes to survive. But Weaver's strong performance is what makes Ripley so memorable. Weaver shows Ripley's true drive for survival, especially when left alone in the intense third act.
 
 ### Themes
 
 *Alien* has multiple heavy themes throughout it, including corporate greed, the value of human life, and assault.
+
+The most prevalent theme is arguably corporate greed—the entire plot wouldn't have happened if the Weyland-Yutani Corporation hadn't decided that the procurement of a Xenomorph superseded the lives of the *Nostromo* crew. It's a straightforward theme that demonstrates a crucial piece of the *Alien* universe.
+
+On the flip side, that same order by the company introduces another major theme: the value of human life. The company considers the crew expendable, but the crew obviously disagrees with that. Much of the film is a pure struggle for survival, with the crew having to dig deep for the strength to try and make it through. The inclusion of a synthetic life form, Ash, also raises questions about human life and sentience.
+
+Finally, there are significant undertones of assault, especially sexual assault, throughout *Alien*. There are many phallic and yonic design elements, most notably in the Xenomorph itself. Its head is intentionally elongated and smooth to appear similar to male genitalia. The Xenomorph's methods of killing and procreation are also sexually traumatic. The Xenomorph's secondary mouth literally kills by penetration. And it is born by implanting (assaulting) an embryo within someone, which then bursts out of them violently. It is the ultimate assault.
+
+### Conclusion
+
+*Alien* is one of my favorite films due to its dark, foreboding atmosphere and fantastic production design. It is a revered classic for good reason, and the franchise continues to this day. It's slow pace isn't for everyone, but I believe it is one of the film's strongest points.
+
+Rating: 10/10
