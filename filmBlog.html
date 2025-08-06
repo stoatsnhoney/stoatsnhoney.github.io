@@ -2,26 +2,38 @@
 layout: default
 title: Blog
 ---
+
 <h1>Film Reviews</h1>
 
-<div class="image-gallery">
-  {% assign sorted_films = site.film | sort: "date" | reverse %}
-  {% for post in sorted_films %}
-    <div class="gallery-item">
+<div style="position: relative;">
+  
+  <ol class="image-gallery">
+    {% assign sorted_films = site.film | sort: "date" | reverse %}
+    {% for post in sorted_films %}
+    <li class="gallery-item">
       <a href="{{ post.url }}">
-        <img src="{{ post.image }}" alt="{{ post.title }} image">
+        <span class="image-overlay">
+          <img src="{{ post.image }}" alt="{{ post.title }}">
+          <h2 class="overlay-title">{{ post.title }}</h2>
+          <p class="overlay-year">{{ post.release }}</p>
+        </span>
       </a>
-      <h2 class="overlay-title">{{ post.title }}</h2>
-      <p class="overlay-year">{{ post.release }}</p>
-    </div>
-  {% endfor %}
-</div>
-
-<aside>
-  <h2>Film Tags</h2>
-  <ul>
-    {% for tag in site.data.film_tags %}
-      <li><a href="/tags/{{ tag.name | slugify }}">{{ tag.name }}</a></li>
+    </li>
     {% endfor %}
-  </ul>
-</aside>
+  </ol>
+
+  <aside>
+    <h3>Genres</h3>
+    <ul>
+      <li>
+        <a href="/filmBlog.html">All</a>
+      </li>
+      {% for tag in site.data.film_tags %}
+      <li>
+        <a href="/tags/{{ tag.name | slugify }}">{{ tag.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </aside>
+
+</div>

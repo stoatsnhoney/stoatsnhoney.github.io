@@ -30,7 +30,6 @@ p {
 }
 
 h1 {
-  font-family: "Caveat", "Libertinus Sans", "Verdana", sans-serif;
   font-size: 4em;
   margin: 32px;
 }
@@ -41,9 +40,39 @@ h2 {
   margin: 32px;
 }
 
+h3 {
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 32px;
+}
+
 a {
   text-decoration: none;
   color: $accent;
+}
+
+aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 16px 16px 16px;
+  background-color: #0000007f;
+  backdrop-filter: blur(4px);
+}
+
+ol {
+  list-style-type: none;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
 }
 
 // MARK: Special Elements
@@ -65,8 +94,8 @@ a {
 .jay {
   font-family: "Caveat", "Libertinus Sans", "Verdana", sans-serif;
   font-weight: 500;
-  font-size: 5em;
-  line-height: 0;
+  font-size: 6em;
+  line-height: 0.5;
 }
 
 .subtitle {
@@ -97,7 +126,7 @@ nav {
   top: 0;
   padding: 15px 0;
   text-align: center;
-  background: #00000061;
+  background: #0000007f;
   backdrop-filter: blur(8px);
   z-index: 10;
 }
@@ -147,7 +176,7 @@ nav a:hover {
 }
 
 .dropdown-content a:hover {
-  color:#13a78c;
+  color: $accent;
   background-color: #ffffff;
   font-weight: bold;
 }
@@ -212,21 +241,11 @@ nav a:hover {
   height: 100%;
   border-radius: 16px;
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .gallery-item:hover img {
   filter: blur(4px) brightness(0.5);
-}
-
-.gallery-item .overlay-title,
-.gallery-item .overlay-year {
-  position: absolute;
-  color: #ffffff;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  margin: 0;
-  padding: 0;
 }
 
 .gallery-item:hover .overlay-title,
@@ -234,17 +253,36 @@ nav a:hover {
   opacity: 1;
 }
 
-.gallery-item .overlay-title {
-  top: 50%;
+.image-overlay {
+  position: relative;
+  display: block;
+}
+
+.image-overlay img {
+  display: block;
+}
+
+.image-overlay .overlay-title,
+.image-overlay .overlay-year {
+  position: absolute;
   left: 50%;
+  color: $textcolor;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+.image-overlay .overlay-title {
+  top: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-.gallery-item .overlay-year {
+.image-overlay .overlay-year {
   top: 90%;
-  left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1rem;
 }

@@ -2,13 +2,38 @@
 layout: default
 title: Blog
 ---
-<h1>Latest Posts</h1>
 
-<ul>
-  {% for music in site.music %}
-    <li>
-      <h2><a href="{{ music.url }}">{{ music.title }}</a></h2>
-      {{ music.excerpt }}
+<h1>Music Reviews</h1>
+
+<div style="position: relative;">
+  
+  <ol class="image-gallery">
+    {% assign sorted_music = site.music | sort: "date" | reverse %}
+    {% for post in sorted_music %}
+    <li class="gallery-item">
+      <a href="{{ post.url }}">
+        <span class="image-overlay">
+          <img src="{{ post.image }}" alt="{{ post.title }}">
+          <h2 class="overlay-title">{{ post.title }}</h2>
+          <p class="overlay-year">{{ post.release }}</p>
+        </span>
+      </a>
     </li>
-  {% endfor %}
-</ul>
+    {% endfor %}
+  </ol>
+
+  <aside>
+    <h3>Composers</h3>
+    <ul>
+      <li>
+        <a href="/musicBlog.html">All</a>
+      </li>
+      {% for tag in site.data.music_tags %}
+      <li>
+        <a href="/tags/{{ tag.name | slugify }}">{{ tag.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </aside>
+
+</div>

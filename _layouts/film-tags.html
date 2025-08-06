@@ -4,13 +4,36 @@ layout: default
 
 <h1>{{ page.tag | capitalize }}</h1>
 
-<ul>
+<div style="position: relative;">
+  
+  <ol class="image-gallery">
     {% for film in site.film %}
     {% if film.film-tags contains page.tag %}
-            <li>
-                <a href="{{ film.url }}">{{ film.title }}</a>
-            </li>
+    <li class="gallery-item">
+      <a href="{{ film.url }}">
+        <span class="image-overlay">
+          <img src="{{ film.image }}" alt="{{ film.title }}">
+          <h2 class="overlay-title">{{ film.title }}</h2>
+          <p class="overlay-year">{{ film.release }}</p>
+        </span>
+      </a>
+    </li>
     {% endif %}
     {% endfor %}
-</ul>
+    </ol>
 
+    <aside>
+        <h3>Genres</h3>
+        <ul>
+            <li>
+                <a href="/filmBlog.html">All</a>
+            </li>
+        {% for tag in site.data.film_tags %}
+        <li>
+        <a href="/tags/{{ tag.name | slugify }}">{{ tag.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </aside>
+
+</div>

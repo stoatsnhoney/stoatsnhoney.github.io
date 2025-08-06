@@ -4,12 +4,36 @@ layout: default
 
 <h1>{{ page.tag | capitalize }}</h1>
 
-<ul>
+<div style="position: relative;">
+  
+  <ol class="image-gallery">
     {% for music in site.music %}
     {% if music.music-tags contains page.tag %}
-            <li>
-                <a href="{{ music.url }}">{{ music.title }}</a>
-            </li>
+    <li class="gallery-item">
+      <a href="{{ music.url }}">
+        <span class="image-overlay">
+          <img src="{{ music.image }}" alt="{{ music.title }}">
+          <h2 class="overlay-title">{{ music.title }}</h2>
+          <p class="overlay-year">{{ music.release }}</p>
+        </span>
+      </a>
+    </li>
     {% endif %}
     {% endfor %}
-</ul>
+    </ol>
+
+    <aside>
+        <h3>Composers</h3>
+        <ul>
+            <li>
+                <a href="/musicBlog.html">All</a>
+            </li>
+        {% for tag in site.data.music_tags %}
+        <li>
+        <a href="/tags/{{ tag.name | slugify }}">{{ tag.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </aside>
+
+</div>

@@ -5,57 +5,62 @@ title: Blog
 
 <h1>Blog</h1>
 
-<p>Welcome to my blog! Here, I share my thoughts on film and music, along with reviews of the latest releases. I hope you find something that resonates with you.</p>
+<div style="display: flex; justify-content: space-between;">
+	<h2>Latest Film Reviews</h2>
+	<p><a href="/filmBlog.html">See All</a></p>
+</div>
+
+<ol class="image-gallery">
+	{% assign sorted_films = site.film | sort: "date" | reverse %}
+	{% for post in sorted_films limit:5 %}
+	<li class="gallery-item">
+		<a href="{{ post.url }}">
+		<span class="image-overlay">
+			<img src="{{ post.image }}" alt="{{ post.title }}">
+			<h2 class="overlay-title">{{ post.title }}</h2>
+			<p class="overlay-year">{{ post.release }}</p>
+		</span>
+		</a>
+	</li>
+	{% endfor %}
+</ol>
+
 
 <div style="display: flex; justify-content: space-between;">
-  <h2>Latest Film Reviews</h2>
-  <p><a href="/filmBlog.html">See All</a></p>
+	<h2>Latest Music Reviews</h2>
+	<p><a href="/musicBlog.html">See All</a></p>
 </div>
 
-<div class="image-gallery">
-    {% assign sorted_films = site.film | sort: "date" | reverse %}
-    {% for post in sorted_films limit:5 %}
-      <div class="gallery-item">
-        <a href="{{ post.url }}">
-          <img src="{{ post.image }}" alt="{{ post.title }} image">
-        </a>
-        <h2 class="overlay-title">{{ post.title }}</h2>
-        <p class="overlay-year">{{ post.release }}</p>
-      </div>
-    {% endfor %}
-</div>
+<ol class="image-gallery">
+	{% assign sorted_music = site.music | sort: "date" | reverse %}
+	{% for post in sorted_music limit:5 %}
+	<li class="gallery-item">
+		<a href="{{ post.url }}">
+			<span class="image-overlay">
+				<img src="{{ post.image }}" alt="{{ post.title }} image">
+				<h2 class="overlay-title">{{ post.title }}</h2>
+				<p class="overlay-year">{{ post.release }}</p>
+			</span>
+		</a>
+	</li>
+	{% endfor %}
+</ol>
 
-
-<div style="display: flex; justify-content: space-between;">
-  <h2>Latest Music Reviews</h2>
-  <p><a href="/musicBlog.html">See All</a></p>
-</div>
-
-<div class="image-gallery">
-  {% assign sorted_music = site.music | sort: "date" | reverse %}
-  {% for post in sorted_music limit:5 %}
-    <div class="gallery-item">
-      <a href="{{ post.url }}">
-        <img src="{{ post.image }}" alt="{{ post.title }} image">
-      </a>
-      <h2 class="overlay-title">{{ post.title }}</h2>
-      <p class="overlay-year">{{ post.release }}</p>
-    </div>
-  {% endfor %}
-</div>
 
 <h2>All Reviews</h2>
 
 <div class="image-gallery">
-  {% assign all_posts = site.film | concat: site.music %}
-  {% assign sorted_posts = all_posts | sort: "date" | reverse %}
-  {% for post in sorted_posts %}
-    <div class="gallery-item">
-      <a href="{{ post.url }}">
-        <img src="{{ post.image }}" alt="{{ post.title }} image">
-      </a>
-      <h2 class="overlay-title">{{ post.title }}</h2>
-      <p class="overlay-year">{{ post.release }}</p>
-    </div>
-  {% endfor %}
+	{% assign all_posts = site.film | concat: site.music %}
+	{% assign sorted_posts = all_posts | sort: "date" | reverse %}
+	{% for post in sorted_posts %}
+		<div class="gallery-item">
+			<a href="{{ post.url }}">
+				<span class="image-overlay">
+					<img src="{{ post.image }}" alt="{{ post.title }} image">
+					<h2 class="overlay-title">{{ post.title }}</h2>
+					<p class="overlay-year">{{ post.release }}</p>
+				</span>
+			</a>
+		</div>
+	{% endfor %}
 </div>
