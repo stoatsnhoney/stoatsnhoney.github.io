@@ -2,13 +2,26 @@
 layout: default
 title: Blog
 ---
-<h1>Latest Posts</h1>
+<h1>Film Reviews</h1>
 
-<ul>
-  {% for film in site.film %}
-    <li>
-      <h2><a href="{{ film.url }}">{{ film.title }}</a></h2>
-      {{ film.excerpt }}
-    </li>
+<div class="image-gallery">
+  {% assign sorted_films = site.film | sort: "date" | reverse %}
+  {% for post in sorted_films %}
+    <div class="gallery-item">
+      <a href="{{ post.url }}">
+        <img src="{{ post.image }}" alt="{{ post.title }} image">
+      </a>
+      <h2 class="overlay-title">{{ post.title }}</h2>
+      <p class="overlay-year">{{ post.release }}</p>
+    </div>
   {% endfor %}
-</ul>
+</div>
+
+<aside>
+  <h2>Film Tags</h2>
+  <ul>
+    {% for tag in site.data.film_tags %}
+      <li><a href="/tags/{{ tag.name | slugify }}">{{ tag.name }}</a></li>
+    {% endfor %}
+  </ul>
+</aside>
