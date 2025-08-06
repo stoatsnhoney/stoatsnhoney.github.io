@@ -143,7 +143,7 @@ nav a {
 }
 
 nav a:hover {
-  background: #13a78c;
+  background: #13a78c7f;
   color: #ffffff;
 }
 
@@ -156,7 +156,7 @@ nav a:hover {
   display: block;
   opacity: 0;
   position: absolute;
-  background-color: #13a78c;
+  background-color: #13a78c7f;
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
   z-index: 1;
@@ -178,7 +178,6 @@ nav a:hover {
 .dropdown-content a:hover {
   color: $accent;
   background-color: #ffffff;
-  font-weight: bold;
 }
 
 .dropdown:hover .dropdown-content {
@@ -187,7 +186,7 @@ nav a:hover {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #13a78c;
+  background-color: #13a78c7f;
 }
 
 .dropdown:hover > .current {
