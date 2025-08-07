@@ -10,13 +10,34 @@ title: Home
 
 <div>
   <h2>About</h2>
-  <p>
-    I'm Jay Friesen, a California-based artist. Throughout my life, I have immersed myself in various artistic mediums, including film, writing, and music. For me, art is a way to share a piece of myself with the world.<br>
+  
+  <div class="about-narrow" style="margin-right: 40%;">
+    <p>I'm Jay Friesen, a California-based artist. Throughout my life, I have immersed myself in various artistic mediums, including film, writing, and music. Art is my way to share a piece of myself with the world.</p>
 
-    My creative journey is defined by experimentation and exploration. Each project is an opportunity to refine my skills and express my unique perspective. I take pride in crafting stories that reflect my experiences and insights, whether through a captivating film, an evocative piece of writing, or an original song.<br>
+    <p>My creative journey is defined by storytelling. Every project is an opportunity to share something with the world, from a complex theme to a small idea. I take pride in crafting stories that reflect my experiences and insights, whether through a captivating film, an evocative piece of writing, or an original song.</p>
 
-    This site serves as my portfolio and blog, showcasing both my work and my thoughts on film and music. Even this site itself is my own work; I coded it line by line. I also have a Projects tab where you can check out some of my other work from my YouTube channel to some cool web projects.<br>
+    <p>This site serves as my portfolio and blog, showcasing both my work and my thoughts on film and music. Even this site itself is my own work; I coded it line by line. I also have a Projects tab where you can check out some of my other work from my YouTube channel to some cool web projects.</p>
 
-    Thank you for taking the time to explore my site. I hope you find something that resonates with you.
-  </p>
+    <p>Thank you for taking the time to explore my site. I hope you find something that resonates with you.</p>
+  </div>
+</div>
+
+<div>
+  <h2>Latest Reviews</h2>
+
+  <div class="image-gallery">
+    {% assign all_posts = site.film | concat: site.music %}
+    {% assign sorted_posts = all_posts | sort: "date" | reverse %}
+    {% for post in sorted_posts %}
+      <div class="gallery-item">
+        <a href="{{ post.url }}">
+          <span class="image-overlay">
+            <img src="{{ post.image }}" alt="{{ post.title }} image">
+            <h2 class="overlay-title">{{ post.title }}</h2>
+            <p class="overlay-year">{{ post.release }}</p>
+          </span>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
 </div>
