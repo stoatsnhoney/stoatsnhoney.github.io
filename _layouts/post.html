@@ -5,7 +5,7 @@ layout: default
 
 {{ content }}
 
-<small>
+<div style="margin: 32px;">
   {% if page.music-tags %}
     {% for music_tag in page.music-tags %}
       <a href="/tags/{{ music_tag }}/">{{ music_tag }}</a>
@@ -15,4 +15,4 @@ layout: default
       <a href="/tags/{{ film_tag }}/">{{ film_tag }}</a>
     {% endfor %}
   {% endif %}
-</small>
+</div>
