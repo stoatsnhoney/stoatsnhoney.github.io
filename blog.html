@@ -10,6 +10,7 @@ title: Blog
 	<p><a href="/filmBlog.html">See All</a></p>
 </div>
 
+
 <ol class="image-gallery">
 	{% assign sorted_films = site.film | sort: "date" | reverse %}
 	{% for post in sorted_films limit:5 %}
@@ -24,6 +25,7 @@ title: Blog
 	</li>
 	{% endfor %}
 </ol>
+
 
 
 <div style="display: flex; justify-content: space-between;">
