@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1>{{ page.tag | capitalize }}</h1>
+<h1>{{ page.tag | camelcase }}</h1>
 
 <div style="position: relative;">
   
@@ -30,7 +30,7 @@ layout: default
             </li>
         {% for tag in site.data.music_tags %}
         <li>
-        <a href="/tags/{{ tag.name | slugify }}">{{ tag.name }}</a>
+        <a href="/tags/{{ tag.name }}">{{ tag.name }}</a>
       </li>
       {% endfor %}
     </ul>
