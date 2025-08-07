@@ -7,7 +7,7 @@ title: Blog
 
 <div style="position: relative;">
   
-  <ol class="image-gallery">
+  <ol class="image-gallery-wrap">
     {% assign sorted_films = site.film | sort: "date" | reverse %}
     {% for post in sorted_films %}
     <li class="gallery-item">

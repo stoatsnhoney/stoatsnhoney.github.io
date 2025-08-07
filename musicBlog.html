@@ -7,7 +7,7 @@ title: Blog
 
 <div style="position: relative;">
   
-  <ol class="image-gallery">
+  <ol class="image-gallery-wrap">
     {% assign sorted_music = site.music | sort: "date" | reverse %}
     {% for post in sorted_music %}
     <li class="gallery-item">

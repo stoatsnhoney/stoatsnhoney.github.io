@@ -248,6 +248,14 @@ nav a:hover {
   margin: 0 32px;
 }
 
+// Secondary image gallery: wraps images to new lines
+.image-gallery-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 32px;
+}
+
 .image-gallery > * {
   flex: 0 0 auto;
 }
