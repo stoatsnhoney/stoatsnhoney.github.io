@@ -51,7 +51,7 @@ title: Blog
 
 <h2>All Reviews</h2>
 
-<div class="image-gallery">
+<div class="image-gallery-wrap">
 	{% assign all_posts = site.film | concat: site.music %}
 	{% assign sorted_posts = all_posts | sort: "date" | reverse %}
 	{% for post in sorted_posts %}
