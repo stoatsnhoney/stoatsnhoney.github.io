@@ -12,6 +12,22 @@ collections:
   type:
     output: true
 
+# SEO/OpenGraph
+logo: /assets/images/Universe.png
+
+description: Master description test.
+
+author:
+  twitter: Jay Friesen
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/Universe.png
+      author: Jay Friesen
+# /SEO
+
 defaults:
   - scope:
       path: ""
